@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vipRouter from "./routes/Vip/Vip"
+import HomeRouter from './routes/home'
+import TicketRouter from './routes/ticket/ticket'
 Vue.use(VueRouter)
 
 const routes = [
   vipRouter,
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  HomeRouter,
+  TicketRouter,
 ]
+Vue.use(VueRouter)
+
+
+
+
 
 const router = new VueRouter({
   mode: 'history',
