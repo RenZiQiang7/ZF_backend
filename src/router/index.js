@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import HomeRouter from './routes/home'
+import TicketRouter from './routes/ticket/ticket'
 Vue.use(VueRouter)
 import loginRouter from "./routes/login";
 const routes = [
@@ -18,6 +20,8 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   // }
   loginRouter,
+  HomeRouter,
+  TicketRouter,
 ]
 
 const router = new VueRouter({
