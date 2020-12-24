@@ -6,19 +6,7 @@ import TicketRouter from './routes/ticket/ticket'
 Vue.use(VueRouter)
 import loginRouter from "./routes/login";
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+
   loginRouter,
   HomeRouter,
   TicketRouter,

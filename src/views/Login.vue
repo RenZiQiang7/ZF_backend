@@ -29,6 +29,7 @@
 </template>
 <script>
 import Vue from "vue";
+import '@/assets//css/bootstrap.min14ed.css?v=3.3.6'
 export default {
     
 }
