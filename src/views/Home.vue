@@ -1,18 +1,21 @@
 <template>
-    <div class="home">欢迎使用华景酒店后台管理系统</div>
+  <div class="home">
+    <span>欢迎使用华景酒店后台管理系统</span>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.home{
-    font-size: 30px;
-    color: #666666;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    bottom: 50%;
-    text-align: center;
-    width: 450px;
-    
+* {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  font-size: 30px;
+  color: #666666;
+  text-align: center;
+  height: 750px;
+  line-height: 750px;
+  text-align: center;
+  
 }
 </style>
