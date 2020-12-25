@@ -1,21 +1,24 @@
 <template>
-    <div class="header">
-        <div class="home">首页</div>
-        <div class="head-icon">
-           头像
-        </div>
-    </div>
+  <div >
+    <el-breadcrumb separator="/" class="header">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
+      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+    </el-breadcrumb>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.header{
-    height: 45px;
-    background: rgb(209, 209, 209);
-    .home{
-        float: left;
-    }
-    .head-icon{
-        float: right;
-    }
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 35px;
+  border-bottom: 1px solid black;
+  background: rgb(233, 232, 232);
+  font-size: 25px;
+  padding-left: 130px;
 }
 </style>

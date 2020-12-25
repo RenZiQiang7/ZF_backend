@@ -1,98 +1,157 @@
 <template>
   <div class="sidebar">
-    <!-- 会员管理项 -->
-    <div>
-      会员管理
-      <ul>
-        <li @click="goVip">会员列表</li>
-        <li>充值设置</li>
-        <li>积分设置</li>
-        <li>充值记录</li>
-      </ul>
+    <div class="avatar">
+      <el-row class="demo-avatar demo-basic">
+        <el-col :span="12">
+          <div class="demo-basic--circle">
+            <div class="block">
+              <el-avatar :size="50" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"></el-avatar>
+            </div>
+           
+          </div>
+          <div class="sub-title">姓名：张三</div>
+        </el-col>
+      </el-row>
     </div>
 
-    <!-- 优惠券 -->
-    <div>
-      优惠券
-      <ul>
-        <li @click="goTicket">优惠券管理</li>
-      </ul>
-    </div>
-    <!-- 商品管理 -->
-    <div>
-      商品管理
-      <ul>
-        <li>商品列表</li>
-        <li>商品分类</li>
-      </ul>
-    </div>
+    <el-row class="tac">
+      <el-col :span="12">
+        <el-menu
+          default-active="2"
+          class="el-menu-vertical-demo"
+          @open="handleOpen"
+          @close="handleClose"
+          background-color="#545c64"
+          text-color="#fff"
+          active-text-color="#ffd04b"
+          router
+        >
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>会员管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">会员列表</el-menu-item>
+              <el-menu-item index="1-2">充值设置</el-menu-item>
+              <el-menu-item index="1-3">积分设置</el-menu-item>
+              <el-menu-item index="1-4">充值记录</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">优惠券</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">优惠券管理</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
 
-    <!-- 商品管理 -->
-    <div>
-      订单管理
-      <ul>
-        <li>商品订单</li>
-        <li>客房订单</li>
-        <li>住宿记录</li>
-      </ul>
-    </div>
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">商品管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">商品列表</el-menu-item>
+              <el-menu-item index="1-2">商品分类</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
 
-    <!-- 客房管理 -->
-    <div>
-      客房管理
-      <ul>
-        <li>房态管理</li>
-        <li>房型管理</li>
-        <li>房号管理</li>
-      </ul>
-    </div>
+          <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">订单管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">商品订单</el-menu-item>
+              <el-menu-item index="1-2">客房订单</el-menu-item>
+              <el-menu-item index="1-3">住宿记录</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
 
-    <!-- 投诉建议管理 -->
-    <div>
-      投诉建议管理
-      <ul>
-        <li>投诉建议</li>
-      </ul>
-    </div>
+          <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">客房管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">房态管理</el-menu-item>
+              <el-menu-item index="1-2">房型管理</el-menu-item>
+              <el-menu-item index="1-3">房号管理</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
 
-    <!-- 用户管理 -->
-    <div>
-      用户管理
-      <ul>
-        <li>管理员列表</li>
-        <li>角色管理</li>
-      </ul>
-    </div>
+          <el-submenu index="6">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">投诉建议管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">投诉建议</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
 
-    <!-- 设置 -->
-    <div>
-      设置
-      <ul>
-        <li>微信设置</li>
-        <li>酒店设置</li>
-        <li>其他设置</li>
-      </ul>
-    </div>
+          <el-submenu index="7">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">用户管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">管理员列表</el-menu-item>
+              <el-menu-item index="1-2">角色管理</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+
+          <el-submenu index="8">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span slot="title">设置</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">微信设置</el-menu-item>
+              <el-menu-item index="1-2">酒店设置</el-menu-item>
+              <el-menu-item index="1-3">其他设置</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+        </el-menu>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script>
+// import "https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+
+// import "https://unpkg.com/element-ui/lib/index.js"
+
 export default {
-    methods:{
-        goTicket(){
-            this.$router.push('/ticket');
-        },
-         goVip(){
-            this.$router.push('/viplist');
-        },
-    }
-}
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    goTicket() {
+      this.$router.push("/ticket");
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
-    .sidebar{
-        width: 160px;
-        max-height: 910px;
-        overflow: scroll;
-        float: left;
-        border-right: 1px solid rgb(189, 189, 189);
-    }
+.sidebar {
+  width: 405px;
+  position: absolute;
+  left: 0;
+  top: 35px;
+}
+.avatar{
+  width: 202px;
+  overflow: hidden;
+  background-color: rgb(84, 92, 100);
+  text-align: center;
+}
 </style>
+
+
