@@ -4,7 +4,7 @@
     <div>
       会员管理
       <ul>
-        <li>会员列表</li>
+        <li @click="goVip">会员列表</li>
         <li>充值设置</li>
         <li>积分设置</li>
         <li>充值记录</li>
@@ -80,7 +80,10 @@ export default {
     methods:{
         goTicket(){
             this.$router.push('/ticket');
-        }
+        },
+         goVip(){
+            this.$router.push('/viplist');
+        },
     }
 }
 </script>
