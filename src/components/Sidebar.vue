@@ -89,7 +89,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .sidebar{
-        width: 160px;
+        width: 405px;
         max-height: 910px;
         overflow: scroll;
         float: left;
