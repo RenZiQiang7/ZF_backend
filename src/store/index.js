@@ -19,7 +19,7 @@ export default new Vuex.Store({
       state.jwt = jwt;
       // 设置localStorage
       localStorage.setItem("jwt", jwt);
-  },
+    },
   },
   actions: {
   },
