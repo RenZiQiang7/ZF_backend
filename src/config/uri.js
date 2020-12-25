@@ -11,4 +11,5 @@ export default{
       // getComingSoon: prefix + "getComingSoonFilmList",
       // //电影详情获取
       // getFilmInfo:prefix+"getFilmInfo",
+   
 }

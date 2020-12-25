@@ -23,6 +23,21 @@ module.exports = {
                     "^/v1": "",
                 },
             },
+            "/user": {
+                // 把相对地址中的域名 映射到 目标地址中
+                // localhost:3000 => https://api.iynn.cn/film/api/v1/
+                target: "http://10.9.24.246:3333/v1/user",
+                // 修改host请求的域名为目标域名
+                // changeOrigin: false,
+                changeOrigin: true,
+                // 请求uri和目标uri有一个对应关系
+                // 请求/api/login ==> 目标 /v1/api/login
+                pathRewrite: {
+                    "^/user": "",
+                },
+            },
         },
+    
     },
+
 };

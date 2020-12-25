@@ -101,8 +101,9 @@ export default {
   padding: 0;
 }
 .main {
-  width: 80%;
+  width: 70%;
   float: left;
+ 
   
 }
 .lk {
