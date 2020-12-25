@@ -32,7 +32,7 @@
               <span>会员管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1">会员列表</el-menu-item>
+              <el-menu-item index="/viplist">会员列表</el-menu-item>
               <el-menu-item index="1-2">充值设置</el-menu-item>
               <el-menu-item index="1-3">积分设置</el-menu-item>
               <el-menu-item index="1-4">充值记录</el-menu-item>
@@ -141,10 +141,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sidebar {
-  width: 405px;
-  position: absolute;
-  left: 0;
-  top: 35px;
+  width: 26.5%;
+  float: left;
 }
 .avatar{
   width: 202px;

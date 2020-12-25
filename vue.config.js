@@ -23,19 +23,6 @@ module.exports = {
                     "^/v1": "",
                 },
             },
-        },
-    },
-
-    devServer: {
-        open: true,
-        // 设置 npm run serve 启动后的端口号
-        port: 3000,
-        // 如果你开始了eslint,不要让eslint在页面中遮罩，它错误会在console.log控制台打印
-        overlay: false,
-        // vue项目代理请求
-        proxy: {
-            // 规则
-            // axios中相对地址开头的字符串  匹配请求uri中的前几位
             "/user": {
                 // 把相对地址中的域名 映射到 目标地址中
                 // localhost:3000 => https://api.iynn.cn/film/api/v1/
@@ -50,5 +37,7 @@ module.exports = {
                 },
             },
         },
+    
     },
+
 };
