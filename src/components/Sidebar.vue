@@ -66,7 +66,7 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="1-1">商品订单</el-menu-item>
-              <el-menu-item index="1-2">客房订单</el-menu-item>
+              <el-menu-item index="/roomorder">客房订单</el-menu-item>
               <el-menu-item index="1-3">住宿记录</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -110,7 +110,7 @@
               <span slot="title">设置</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1">微信设置</el-menu-item>
+              <el-menu-item index="/wechat">微信设置</el-menu-item>
               <el-menu-item index="1-2">酒店设置</el-menu-item>
               <el-menu-item index="1-3">其他设置</el-menu-item>
             </el-menu-item-group>
@@ -141,7 +141,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sidebar {
-  width: 26.5%;
+  width: 405px;
   float: left;
 }
 .avatar{

@@ -50,10 +50,7 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10"></div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
+          <div class="col-sm-10">
             <button type="button" class="btn btn-default input-size" @click="submit">
               登录
             </button>
@@ -152,7 +149,7 @@ export default {
 .img-yh {
   border-width: 0px;
   position: absolute;
-  left: 7px;
+  left: 23px;
   top: 23px;
   width: 24px;
   height: 24px;

@@ -1,5 +1,4 @@
 <template>
-
   <div class="main">
     <div>
       筛选条件：
@@ -26,7 +25,6 @@
           </tr>
         </thead>
         <tbody>
-
           <tr v-for="(item, index) in list" :key="index">
             <th><input type="checkbox" />点击选中</th>
             <th scope="row">
@@ -46,14 +44,11 @@
       </table>
       <span>当前共n条信息</span>
       <div class="k1">
-      <el-pagination
-  background
-  layout="prev, pager, next"  
-  :total="1000">
-</el-pagination>
+        <el-pagination background layout="prev, pager, next" :total="1000">
+        </el-pagination>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 <script>
 import "../../assets/bootstrap-3.3.7/dist/css/bootstrap.min.css";
@@ -65,7 +60,7 @@ export default {
       list: [],
       configs: [],
       active: "userName",
-      iptval: "",           
+      iptval: "",
     };
   },
   created() {
@@ -78,7 +73,7 @@ export default {
     sel() {
       this.$http.post("/v1/viplist").then((ret) => {
         let tmp = [];
-       ret.forEach((el) => {
+        ret.forEach((el) => {
           if (el[this.active] == this.iptval) {
             tmp.push(el);
           }
@@ -87,11 +82,11 @@ export default {
       });
     },
     sel1() {
-    this.$http.post("/v1/viplist").then((ret) => {
-      this.list = ret;
-    });
+      this.$http.post("/v1/viplist").then((ret) => {
+        this.list = ret;
+      });
     },
-  }
+  },
 };
 </script>
 
@@ -101,10 +96,8 @@ export default {
   padding: 0;
 }
 .main {
-  width: 70%;
+  width: 60%;
   float: left;
- 
-  
 }
 .lk {
   margin: 0;
@@ -160,7 +153,7 @@ img {
 .k1 {
   float: right;
 }
-.lk2-1{
+.lk2-1 {
   width: 50px;
   height: 30px;
   background: orangered;
