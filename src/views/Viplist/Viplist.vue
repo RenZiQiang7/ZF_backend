@@ -26,7 +26,6 @@
           </tr>
         </thead>
         <tbody>
-
           <tr v-for="(item, index) in list" :key="index">
             <th><input type="checkbox" />点击选中</th>
             <th scope="row">
@@ -65,9 +64,12 @@ export default {
       list: [],
       configs: [],
       active: "userName",
-      iptval: "",           
+      iptval: "",   
+      
+      
     };
   },
+
   created() {
     this.$http.post("/v1/viplist").then((ret) => {
       console.log(ret);
@@ -101,7 +103,7 @@ export default {
   padding: 0;
 }
 .main {
-  width: 70%;
+  width: 60%;
   float: left;
  
   
