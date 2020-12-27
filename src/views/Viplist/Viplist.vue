@@ -60,9 +60,16 @@ export default {
       list: [],
       configs: [],
       active: "userName",
+<<<<<<< HEAD
       iptval: "",
+=======
+      iptval: "",   
+      
+      
+>>>>>>> mf
     };
   },
+
   created() {
     this.$http.post("/v1/viplist").then((ret) => {
       console.log(ret);

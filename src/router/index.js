@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+<<<<<<< HEAD
 import vipRouter from "./routes/Vip/Vip"
 
+=======
+import vipRouter from "./routes/vip/Vip"
+>>>>>>> mf
 import HomeRouter from './routes/home'
 import TicketRouter from './routes/ticket/ticket'
 Vue.use(VueRouter)
